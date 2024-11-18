@@ -48,10 +48,16 @@ $('#dropey').click(function() {
             var lat = parseFloat(meteor.geolocation.latitude);
             console.log(meteor.name);
             //and its magnitude
-            var mass = parseInt(meteor.mass);
+            if (isNaN(meteor.mass)) {
+                mass = 10;
+            }
+            else {
+                var mass = parseInt(meteor.mass);
+            }
+            
             //for each earthquake create a circle
         
-            var circle = L.circle([lat, lng], 1, {
+            var circle = L.circle([lat, lng], mass, {
                 color: 'blue',
                 opacity: 0,
                 fillColor: 'blue',
