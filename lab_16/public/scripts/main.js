@@ -2,10 +2,11 @@ var socket = io();
 
 $('#form').submit(function() {
     var message = $('#input').val();
+    var username = $('#username').val();
 
-    if (message) {
+    if (message && username) {
         console.log("message sent");
-        socket.emit('chat message', message);
+        socket.emit('chat message', username + ": " + message);
         $("#input").val("");
     }
     return false;
