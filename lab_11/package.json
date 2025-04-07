@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "express": "^4.21.2",
+    "knock-knock-jokes": "^1.7.0",
+    "knockknock": "^0.3.0"
+  },
+  "name": "lab_11",
+  "version": "1.0.0",
+  "description": "",
+  "main": "author",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
